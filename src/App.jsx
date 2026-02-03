@@ -211,6 +211,17 @@ export default function Page() {
     setIsMuted(!isMuted);
   };
 
+  const [noBtnPos, setNoBtnPos] = useState({ top: "50%", left: "50%" });
+  const moveNoButton = () => {
+    const top = Math.random() * 80 + 10;   // 10% – 90%
+    const left = Math.random() * 80 + 10;  // 10% – 90%
+
+    setNoBtnPos({
+      top: `${top}%`,
+      left: `${left}%`,
+    });
+  };
+
   const getNoButtonText = () => {
 
     const phrases = [
@@ -345,7 +356,7 @@ export default function Page() {
               alt="Love Animation"
             />
             <h1 className="text-4xl md:text-6xl my-4 text-center">
-              Will you be my Valentine?
+              Will you be my Valentine, Nancy ❤️
             </h1>
             <div className="flex flex-wrap justify-center gap-2 items-center">
               <button
@@ -405,13 +416,3 @@ const Footer = () => {
     </a>
   );
 };
-
-
-
-
-
-
-
-// ! Pathways-
-// https://app.spline.design/file/48a9d880-40c9-4239-bd97-973aae012ee0
-// https://app.spline.design/file/72e6aee2-57ed-4698-afa7-430f8ed7bd87
